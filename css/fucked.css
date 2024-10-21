@@ -1,0 +1,16 @@
+@font-face {
+    font-family: "Minecraft";
+    src: url(fonts/MinecraftRegular-Bmg3.otf);
+}
+
+
+main p {
+	font-family: "Minecraft";
+	font-size: 3rem;
+	background-color: rgba(255, 0, 0, 0.4);
+	color: white;
+}
+
+main img {
+	width: 30%;
+}

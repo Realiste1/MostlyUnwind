@@ -3,6 +3,114 @@
     src: url(fonts/MinecraftTen-VGORe.ttf);
 }
 
-header>h1{
+@font-face {
+    font-family: "Minecraft";
+    src: url(fonts/MinecraftRegular-Bmg3.otf);
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+header>div>h1{
 	font-family: "Minecraft Ten", sans-serif;
+	font-size: 3rem;
+	text-align: center;
+	color: aquamarine;
+	text-shadow: 0rem 0rem 1rem green;
+}
+
+header>div>img {
+	width: 100%;
+}
+
+header>div {
+	margin-left: 40%;
+	margin-right: 40%;
+}
+
+header {
+	border-bottom-width: 0.25rem;
+	border-bottom-color: black;
+	border-bottom-style: solid;
+}
+
+body {
+	
+	background-image: url(../img/bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+
+nav {
+	text-align: center;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	border-bottom: 0.1rem solid black;
+	background-color: rgba(255, 255, 255, 0.3);
+	position: sticky;
+	top: 0;
+	padding-left: 20%;
+	padding-right: 20%;
+}
+
+nav a {
+	background-color: rgba(0, 0, 0, 0.4);
+	padding: 0.9rem;
+	border-radius: 2rem;
+	text-decoration: none;
+	color: white;
+	font-family: "Minecraft", sans-serif;
+}
+
+#part1{
+	padding-left: 30%;
+	padding-right: 30%;
+}
+
+#uses {
+	font-family: "Minecraft";
+	color: white;
+	padding-left: 2rem;
+	background-color: rgba(0, 0, 0, 0.5);
+	border: 0.1rem gray solid;
+}
+
+#void {
+	padding-top: 75rem;
+}
+
+#downloads {
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+#downloads h2 {
+	font-family: "Minecraft Ten", sans-serif;
+	font-size: 3rem;
+	text-align: center;
+	color: lightblue;
+	text-shadow: 0rem 0rem 1rem green;
+}
+
+#downloads div {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 3rem;
+}
+
+#downloads a {
+	border: 0.25rem black solid;
+	font-family: "Minecraft";
+	text-decoration: none;
+	text-align: center;
+	color: black;
+	font-size: 1.5rem;
+}
+
+#downloads p {
+	margin: 0.25rem;
 }
