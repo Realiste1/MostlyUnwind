@@ -1,0 +1,13 @@
+@font-face {
+    font-family: "Minecraft Ten";
+    src: url(fonts/MinecraftTen-VGORe.ttf);
+}
+
+@font-face {
+    font-family: "Minecraft";
+    src: url(fonts/MinecraftRegular-Bmg3.otf);
+}
+
+p {
+    font-family: "Minecraft";
+}
