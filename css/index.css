@@ -59,9 +59,6 @@ nav {
     top: 0;
 }
 
-#menu {
-    display: none;
-}
 
 nav a {
     background-color: rgba(0, 0, 0, 0.4);
@@ -72,21 +69,18 @@ nav a {
     font-size: 1.5rem;
     padding: 0.5rem;
 }
+#menu {
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+}
+
 
 #burger {
     width: 3rem;
     transition: 0.3s;
 }
 
-#burger:hover {
-    transform: rotate(90deg);
-}
-
-#burger:hover ~ #menu {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
 
 #uses {
     font-family: "Minecraft";
