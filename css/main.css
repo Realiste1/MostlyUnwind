@@ -1,0 +1,140 @@
+@font-face {
+    font-family: "Minecraft Ten";
+    src: url(fonts/MinecraftTen-VGORe.ttf);
+}
+
+@font-face {
+    font-family: "Minecraft";
+    src: url(fonts/MinecraftRegular-Bmg3.otf);
+}
+
+/* All screens */
+
+header>div>h1{
+    font-family: "Minecraft Ten", sans-serif;
+    color: aquamarine;
+    text-shadow: 0rem 0rem 1rem green;
+}
+
+header {
+    border-bottom-width: 0.25rem;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+}
+
+header>div>img{
+    width: 30%;
+}
+
+header>div {
+    display: inline-block;
+}
+
+.header_s {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+header>div>h1{
+    font-size: 2rem;
+    width: 50%;
+    text-align: center;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url(../img/bg_mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+nav {
+    border-bottom: 0.1rem solid black;
+    background-color: rgba(255, 255, 255, 0.3);
+    position: sticky;
+    top: 0;
+}
+
+
+nav a {
+    background-color: rgba(0, 0, 0, 0.4);
+    text-decoration: none;
+    color: white;
+    font-family: "Minecraft", sans-serif;
+    border: 0.1rem darkgray solid;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+#menu {
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+#burger {
+    width: 3rem;
+    transition: 0.3s;
+}
+
+
+
+/* Computer only */
+
+
+@media screen and (min-width:900px) {
+    header>div>h1{
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    header>div>img {
+        width: 100%;
+    }
+
+    header>div {
+        margin-left: 40%;
+        margin-right: 40%;
+    }
+
+    header {
+        border-bottom-width: 0.25rem;
+        border-bottom-color: black;
+        border-bottom-style: solid;
+    }
+
+    body {
+        background-image: url(../img/bg.png);
+    }
+
+
+    nav {
+        text-align: center;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+
+    nav a {
+        padding: 0.9rem;
+        border-radius: 2rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+    
+    #menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #burger {
+        display: none;
+    }
+}
