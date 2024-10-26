@@ -10,10 +10,6 @@
 
 /* All screens */
 
-html {
-    scroll-behavior: smooth;
-}
-
 header>div>h1{
     font-family: "Minecraft Ten", sans-serif;
     color: aquamarine;
@@ -26,7 +22,30 @@ header {
     border-bottom-style: solid;
 }
 
+header>div>img{
+    width: 30%;
+}
+
+header>div {
+    display: inline-block;
+}
+
+.header_s {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+header>div>h1{
+    font-size: 2rem;
+    width: 50%;
+    text-align: center;
+}
+html {
+    scroll-behavior: smooth;
+}
+
 body {
+    background-image: url(../img/bg_mobile.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -40,11 +59,33 @@ nav {
     top: 0;
 }
 
+#menu {
+    display: none;
+}
+
 nav a {
     background-color: rgba(0, 0, 0, 0.4);
     text-decoration: none;
     color: white;
     font-family: "Minecraft", sans-serif;
+    border: 0.1rem darkgray solid;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+
+#burger {
+    width: 3rem;
+    transition: 0.3s;
+}
+
+#burger:hover {
+    transform: rotate(90deg);
+}
+
+#burger:hover ~ #menu {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 #uses {
@@ -52,6 +93,11 @@ nav a {
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
     border: 0.1rem gray solid;
+    padding: 0.5rem;
+}
+
+#void {
+    padding-top: 100rem;
 }
 
 #downloads {
@@ -70,6 +116,8 @@ nav a {
     text-decoration: none;
     color: black;
 }
+
+
 
 
 /* Computer only */
@@ -112,6 +160,19 @@ nav a {
     nav a {
         padding: 0.9rem;
         border-radius: 2rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+    
+    #menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #burger {
+        display: none;
     }
 
     #part1{
