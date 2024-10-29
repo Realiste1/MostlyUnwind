@@ -22,19 +22,33 @@
     padding-top: 100rem;
 }
 
-#downloads div {
+#downloads {
     background-color: rgba(255, 255, 255, 0.5);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+#download_flex {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    flex-direction: column;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#download_flex div {
     padding-top: 1rem;
     padding-bottom: 1rem;
     display: flex;
     justify-content: center;
 }
 
-#downloads img {
+#download_flex img {
     width: 100%;
 }
 
-#downloads p {
+#download_flex p {
     text-align: center;
 }
 
@@ -42,9 +56,10 @@
     font-family: "Minecraft Ten", sans-serif;
     color: lightblue;
     text-shadow: 0rem 0rem 1rem green;
+    padding-left: 1rem;
 }
 
-#downloads a {
+#download_flex a {
     border: 0.25rem black solid;
     font-family: "Minecraft";
     text-decoration: none;
@@ -74,29 +89,36 @@
         padding-top: 75rem;
     }
 
-    #downloads {
-        background-color: rgba(255, 255, 255, 0.5);
-    }
 
     #downloads h2 {
         font-size: 3rem;
         text-align: center;
     }
 
-    #downloads div {
+    #downloads {
+        width: 100%;
+        gap: 3rem;
+    }
+    #download_flex {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        gap: 3rem;
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
     }
+    #download_flex div {
+        width: 40%;
+    }
+    
 
-    #downloads a {
+    #download_flex a {
         text-align: center;
         font-size: 1.5rem;
     }
 
-    #downloads p {
+    #download_flex p {
         margin: 0.25rem;
     }
 }
