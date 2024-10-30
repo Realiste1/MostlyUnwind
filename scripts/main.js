@@ -1,12 +1,19 @@
+/* aaaaaaaaaaa   */
+
+const rootPath = window.location.hostname === "localhost" ? "/" : "/MostlyUnwind/";
+/* document.getElementsByClassName("logo").src = `${rootPath}img/logo.png`;
+document.getElementById("stylesheet").href = `${rootPath}css/style.css`; */
+
+
 /* biscuits */
 
 let clight_mode = get_cookie("light_mode")
 if (clight_mode == "light") {
-    document.getElementById("body").style.backgroundImage = "url(img/computer_bg_light.png)";
-    document.getElementById("light").src = "img/moon.png"
+    document.getElementById("body").style.backgroundImage = "url(./img/computer_bg_light.png)";
+    document.getElementById("light").src = "./img/moon.png"
 }else if (clight_mode == "dark") {
-    document.getElementById("body").style.backgroundImage = "url(img/computer_bg_dark.png)";
-    document.getElementById("light").src = "img/sun.png"
+    document.getElementById("body").style.backgroundImage = "url(./img/computer_bg_dark.png)";
+    document.getElementById("light").src = "./img/sun.png"
 }else{
     document.cookie = "light_mode=light; path=/; expires=Thu, 18 Dec 3013 12:00:00 UT"
 }
@@ -50,19 +57,19 @@ function change_light_mode() {
     clight_mode = get_cookie("light_mode");
     if (clight_mode == "light") {
         document.cookie = "light_mode=dark; path=/; expires=Thu, 18 Dec 3013 12:00:00 UT";
-        document.getElementById("body").style.backgroundImage = "url(img/computer_bg_dark.png)";
-        document.getElementById("light").src = "img/sun.png";
+        document.getElementById("body").style.backgroundImage = "url(./img/computer_bg_dark.png)";
+        document.getElementById("light").src = "./img/sun.png";
 
         let rdm = Math.floor(100*Math.random());
         if(rdm == 1){
-            document.getElementById("light").src = "img/herobrine.png";
-            document.getElementById("body").style.backgroundImage = "url(img/secret_bg.png)";
+            document.getElementById("light").src = "./img/herobrine.png";
+            document.getElementById("body").style.backgroundImage = "url(./img/secret_bg.png)";
         }
         
     }else if (clight_mode == "dark") {
         document.cookie = "light_mode=light; path=/; expires=Thu, 18 Dec 3013 12:00:00 UT";
-        document.getElementById("body").style.backgroundImage = "url(img/computer_bg_light.png)";
-        document.getElementById("light").src = "img/moon.png";
+        document.getElementById("body").style.backgroundImage = "url(./img/computer_bg_light.png)";
+        document.getElementById("light").src = "./img/moon.png";
     }else{ /* in case something happened */
         document.cookie = "light_mode=light; path=/; expires=Thu, 18 Dec 3013 12:00:00 UT";
     }
