@@ -7,35 +7,23 @@
 	<link rel="icon" href="img/icon.png">
 	<link rel="stylesheet" href="css/index.css">
 	<link rel="stylesheet" href="css/main.css">
-    <script>
-        const isGitHubPages = window.location.hostname === "realiste1.github.io";
-        const basePath = isGitHubPages ? "/MostlyUnwind" : "";
-        document.querySelectorAll('link[rel="stylesheet"], script[src], img[src]').forEach(element => {
-            if (element.getAttribute("data-path")) {
-                element.setAttribute(
-                    "href" in element ? "href" : "src",
-                    basePath + element.getAttribute("data-path")
-                );
-            }
-        });
-    </script>
 </head>
 <body id="body">
 	<header>
 		<div>
-			<img data-path="img/icon.png" alt="MostlyUnwind Icon" class="header_s">
+			<img src="img/icon.png" alt="MostlyUnwind Icon" class="header_s">
 			<h1 class="header_s">MostlyUnwind</h1>
 		</div>
 	</header>
 	<nav>
-        <img data-path="img/burgeur.png" id="burger" onclick="toggle_menu()" alt="Open Category List">
+        <img src="img/burgeur.png" id="burger" onclick="toggle_menu()" alt="Open Category List">
         <div id="menu">
-            <a class="menu_a" data-path="">Main Page</a>
-            <a class="menu_a" data-path="#downloads">Downloads</a>
-            <a class="menu_a" data-path="recipes">Recipes</a>
-            <a class="menu_a" data-path="http://194.153.216.227:25675/" target="_blank">World Map</a>
+            <a class="menu_a" href="">Main Page</a>
+            <a class="menu_a" href="#downloads">Downloads</a>
+            <a class="menu_a" href="recipes">Recipes</a>
+            <a class="menu_a" href="http://194.153.216.227:25675/" target="_blank">World Map</a>
             <div id="light_div">
-			    <a><img data-path="img/moon.png" alt="Enable Light Mode" id="light" onclick="change_light_mode()"></a>
+			    <a><img src="img/moon.png" alt="Enable Light Mode" id="light" onclick="change_light_mode()"></a>
             </div>
         </div>
 	</nav>
@@ -66,20 +54,20 @@
 			<h2>DOWNLOADS</h2>
 			<div id="download_flex">
 				<div>
-					<a id="dl_music" data-path="https://www.dropbox.com/scl/fo/9xehpbsoxsabogg66zh8h/AI88TVFcJNVbFTUsK-iz6_c?rlkey=dm4hnbp75d23vug7d8lzi8geg&st=oe4hiyf8&dl=0" target="_blank">
-						<img data-path="img/dl_music.png" alt="Download Music Pack">
+					<a id="dl_music" href="https://www.dropbox.com/scl/fo/9xehpbsoxsabogg66zh8h/AI88TVFcJNVbFTUsK-iz6_c?rlkey=dm4hnbp75d23vug7d8lzi8geg&st=oe4hiyf8&dl=0" target="_blank">
+						<img src="img/dl_music.png" alt="Download Music Pack">
 						<p>Music Pack</p>
 					</a>
 				</div>
 				<div>
-					<a id="dl_modpack_multi" data-path="fuckedup.html" target="_blank">
-						<img data-path="img/dl_multimc.png" alt="Download Modpack (MultiMC)">
+					<a id="dl_modpack_multi" href="fuckedup.html" target="_blank">
+						<img src="img/dl_multimc.png" alt="Download Modpack (MultiMC)">
 						<p>Modpack (MultiMC)</p>
 					</a>
 				</div>
 			</div>
 		</div>
 	</main>
-	<script data-path="scripts/main.js" async defer></script>
+	<script src="scripts/main.js" async defer></script>
 </body>
 </html>
