@@ -8,7 +8,7 @@ if (clight_mode == "light") {
     document.getElementById("body").style.backgroundImage = "url(img/computer_bg_dark.png)";
     document.getElementById("light").src = "img/sun.png"
 }else{
-    document.cookie = "light_mode=light; expires=Thu, 18 Dec 3013 12:00:00 UT"
+    document.cookie = "light_mode=light; path=/; expires=Thu, 18 Dec 3013 12:00:00 UT"
 }
 
 function get_cookie(cname) {
@@ -49,7 +49,7 @@ function toggle_menu() {
 function change_light_mode() {
     clight_mode = get_cookie("light_mode");
     if (clight_mode == "light") {
-        document.cookie = "light_mode=dark; expires=Thu, 18 Dec 3013 12:00:00 UT";
+        document.cookie = "light_mode=dark; path=/; expires=Thu, 18 Dec 3013 12:00:00 UT";
         document.getElementById("body").style.backgroundImage = "url(img/computer_bg_dark.png)";
         document.getElementById("light").src = "img/sun.png";
 
@@ -60,10 +60,10 @@ function change_light_mode() {
         }
         
     }else if (clight_mode == "dark") {
-        document.cookie = "light_mode=light; expires=Thu, 18 Dec 3013 12:00:00 UT";
+        document.cookie = "light_mode=light; path=/; expires=Thu, 18 Dec 3013 12:00:00 UT";
         document.getElementById("body").style.backgroundImage = "url(img/computer_bg_light.png)";
         document.getElementById("light").src = "img/moon.png";
     }else{ /* in case something happened */
-        document.cookie = "light_mode=light; expires=Thu, 18 Dec 3013 12:00:00 UT";
+        document.cookie = "light_mode=light; path=/; expires=Thu, 18 Dec 3013 12:00:00 UT";
     }
 }
