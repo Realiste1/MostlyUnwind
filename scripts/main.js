@@ -19,7 +19,7 @@ if (clight_mode == "light") {
     document.getElementById("body").style.backgroundImage = "url(" + rootPath + "img/computer_bg_dark.png)";
     document.getElementById("light").src = rootPath + "img/sun.png";
 }else{
-    document.cookie = "light_mode=light; path=/MostlyUnwind/; expires=Thu, 18 Dec 3013 12:00:00 UT; Secure";
+    document.cookie = "light_mode=light; path=/MostlyUnwind/; SameSite=Lax; expires=Thu, 18 Dec 3013 12:00:00 UT; Secure";
 }
 
 function get_cookie(cname) {
@@ -60,7 +60,7 @@ function toggle_menu() {
 function change_light_mode() {
     clight_mode = get_cookie("light_mode");
     if (clight_mode == "light") {
-        document.cookie = "light_mode=dark; path=/MostlyUnwind/; expires=Thu, 18 Dec 3013 12:00:00 UT; Secure";
+        document.cookie = "light_mode=dark; path=/MostlyUnwind/; SameSite=Lax; expires=Thu, 18 Dec 3013 12:00:00 UT; Secure";
         document.getElementById("body").style.backgroundImage = "url(" + rootPath + "img/computer_bg_dark.png)";
         document.getElementById("light").src = rootPath + "img/sun.png";
 
@@ -71,10 +71,10 @@ function change_light_mode() {
         }
         
     }else if (clight_mode == "dark") {
-        document.cookie = "light_mode=light; path=/MostlyUnwind/; expires=Thu, 18 Dec 3013 12:00:00 UT; Secure";
+        document.cookie = "light_mode=light; path=/MostlyUnwind/; SameSite=Lax; expires=Thu, 18 Dec 3013 12:00:00 UT; Secure";
         document.getElementById("body").style.backgroundImage = "url(" + rootPath + "img/computer_bg_light.png)";
         document.getElementById("light").src = rootPath + "img/moon.png";
     }else{ /* in case something happened */
-        document.cookie = "light_mode=light; path=/MostlyUnwind/; expires=Thu, 18 Dec 3013 12:00:00 UT; Secure";
+        document.cookie = "light_mode=light; path=/MostlyUnwind/; SameSite=Lax; expires=Thu, 18 Dec 3013 12:00:00 UT; Secure";
     }
 }
