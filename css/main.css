@@ -60,7 +60,7 @@ nav {
 }
 
 
-nav a {
+nav a{
     background-color: rgba(0, 0, 0, 0.4);
     text-decoration: none;
     color: white;
@@ -69,6 +69,8 @@ nav a {
     font-size: 1.5rem;
     padding: 0.5rem;
 }
+
+
 #menu {
     display: none;
     justify-content: center;
@@ -81,6 +83,14 @@ nav a {
     transition: 0.3s;
 }
 
+#light {
+    width: 3.5rem;
+}
+
+#light_div {
+    display: flex;
+    justify-content: center;
+}
 
 
 /* Computer only */
@@ -107,8 +117,8 @@ nav a {
         border-bottom-style: solid;
     }
 
-    body {
-        background-image: url(../img/bg.png);
+    #body {
+        background-image: url(../img/computer_bg_dark.png);
     }
 
 
@@ -116,8 +126,8 @@ nav a {
         text-align: center;
         padding-top: 2rem;
         padding-bottom: 2rem;
-        padding-left: 20%;
-        padding-right: 20%;
+        padding-left: 5%;
+        padding-right: 5%;
     }
 
     nav a {
@@ -128,13 +138,19 @@ nav a {
         flex-direction: row;
     }
     
+
     #menu {
         display: flex;
         flex-direction: row;
         justify-content: center;
+        align-items: center;
     }
 
     #burger {
         display: none;
+    }
+
+    #light_div {
+        margin-left: auto;
     }
 }

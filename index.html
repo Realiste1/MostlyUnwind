@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="css/index.css">
 	<link rel="stylesheet" href="css/main.css">
 </head>
-<body>
+<body id="body">
 	<header>
 		<div>
 			<img src="img/icon.png" alt="MostlyUnwind Icon" class="header_s">
@@ -21,7 +21,9 @@
             <a class="menu_a" href="http://194.153.216.227:25675/" target="_blank">World Map</a>
             <a class="menu_a" href="#downloads">Downloads</a>
             <a class="menu_a" href="recipes.html">Recipes</a>
-													 <img src="img/sun" alt="Enable Light Mode">
+            <div id="light_div">
+			    <a><img src="img/moon.png" alt="Enable Light Mode" id="light" onclick="change_light_mode()"></a>
+            </div>
         </div>
 	</nav>
 	<main>
