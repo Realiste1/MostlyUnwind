@@ -16,17 +16,16 @@ function get_cookie(cname) {
     let decodedCookie = decodeURIComponent(document.cookie);
     let ca = decodedCookie.split(';');
     for(let i = 0; i <ca.length; i++) {
-      let c = ca[i];
-      while (c.charAt(0) == ' ') {
-        c = c.substring(1);
-      }
-      if (c.indexOf(name) == 0) {
-        return c.substring(name.length, c.length);
-      }
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
     }
     return "";
-  }
-
+}
 
 function toggle_menu() {
     let dropdown = document.getElementById("menu");
@@ -52,11 +51,18 @@ function change_light_mode() {
     if (clight_mode == "light") {
         document.cookie = "light_mode=dark";
         document.getElementById("body").style.backgroundImage = "url(img/computer_bg_dark.png)";
-        document.getElementById("light").src = "img/sun.png"
+        document.getElementById("light").src = "img/sun.png";
+
+        let rdm = Math.floor(100*Math.random());
+        if(rdm == 1){
+            document.getElementById("light").src = "img/herobrine.png";
+            document.getElementById("body").style.backgroundImage = "url(img/secret_bg.png)";
+        }
+        
     }else if (clight_mode == "dark") {
         document.cookie = "light_mode=light";
         document.getElementById("body").style.backgroundImage = "url(img/computer_bg_light.png)";
-        document.getElementById("light").src = "img/moon.png"
+        document.getElementById("light").src = "img/moon.png";
     }else{ /* in case something happened */
         document.cookie = "light_mode=light";
     }
