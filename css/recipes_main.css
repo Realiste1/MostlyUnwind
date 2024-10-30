@@ -11,3 +11,68 @@
 p {
     font-family: "Minecraft";
 }
+
+
+#menu_recipes {
+    border-bottom: 0.1rem solid black;
+    background-color: rgba(168, 90, 27, 0.5);
+    position: sticky;
+    top: 0;
+}
+
+
+#menu_recipes a{
+    background-color: rgba(0, 0, 0, 0.4);
+    text-decoration: none;
+    color: white;
+    font-family: "Minecraft", sans-serif;
+    border: 0.1rem darkgray solid;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+
+
+#recipes_menu {
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+#burger_recipes {
+    width: 3rem;
+    transition: 0.3s;
+    vertical-align: middle;
+    margin: 0.25rem;
+}
+
+@media screen and (min-width=900px) {
+    #menu_recipes {
+        text-align: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        margin-bottom: 2rem;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    #menu_recipes a {
+        padding: 0.9rem;
+        border-radius: 2rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+
+    #recipes_menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #burger_recipes {
+        display: none;
+    }
+}

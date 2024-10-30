@@ -9,12 +9,6 @@
 	<link rel="stylesheet" href="/css/recipes_main.css">
 </head>
 <body id="body">
-	<header>
-		<div>
-			<img src="/img/icon.png" alt="MostlyUnwind Icon" class="header_s">
-			<h1 class="header_s">MostlyUnwind</h1>
-		</div>
-	</header>
 	<nav>
         <img src="/img/burgeur.png" id="burger" onclick="toggle_menu()" alt="Open Category List">
         <div id="menu">
@@ -28,8 +22,15 @@
         </div>
 	</nav>
 	<main>
+        <div id="menu_recipes">
+            <img src="/img/crafting_table_icon.png" id="burger_recipes" onclick="toggle_menu_recipes()" alt="Open Recipes List">
+            <div id="recipes_menu">
+            
+            </div>
+        </div>
 		
 	</main>
 	<script src="/scripts/main.js" async defer></script>
+	<script src="/scripts/recipes.js" async defer></script>
 </body>
 </html>

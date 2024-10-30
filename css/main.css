@@ -81,6 +81,8 @@ nav a{
 #burger {
     width: 3rem;
     transition: 0.3s;
+    vertical-align: middle;
+    margin: 0.25rem;
 }
 
 #light {
