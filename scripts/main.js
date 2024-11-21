@@ -11,7 +11,7 @@ document.getElementById("stylesheet").href = `${rootPath}css/style.css`; */
 
 /* biscuits */
 
-let clight_mode = get_cookie("light_mode");
+let clight_mode = localStorage.getItem("light_mode")
 if (clight_mode == "light") {
     document.getElementById("body").style.backgroundImage = "url(" + rootPath + "img/computer_bg_light.png)";
     document.getElementById("light").src = rootPath + "img/moon.png";
@@ -19,23 +19,7 @@ if (clight_mode == "light") {
     document.getElementById("body").style.backgroundImage = "url(" + rootPath + "img/computer_bg_dark.png)";
     document.getElementById("light").src = rootPath + "img/sun.png";
 }else{
-    document.cookie = "light_mode=light; path=/MostlyUnwind/; expires=Thu, 18 Dec 3013 12:00:00 UT; Secure";
-}
-
-function get_cookie(cname) {
-    let name = cname + "=";
-    let decodedCookie = decodeURIComponent(document.cookie);
-    let ca = decodedCookie.split(';');
-    for(let i = 0; i <ca.length; i++) {
-        let c = ca[i];
-        while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-        }
-    }
-    return "";
+    localStorage.setItem("light_mode", "dark");
 }
 
 function toggle_menu() {
@@ -58,9 +42,9 @@ function toggle_menu() {
 }
 
 function change_light_mode() {
-    clight_mode = get_cookie("light_mode");
+    clight_mode = localStorage.getItem("light_mode");
     if (clight_mode == "light") {
-        document.cookie = "light_mode=dark; path=/MostlyUnwind/; expires=Thu, 18 Dec 3013 12:00:00 UT; Secure";
+        localStorage.setItem("light_mode", "dark");
         document.getElementById("body").style.backgroundImage = "url(" + rootPath + "img/computer_bg_dark.png)";
         document.getElementById("light").src = rootPath + "img/sun.png";
 
@@ -71,10 +55,23 @@ function change_light_mode() {
         }
         
     }else if (clight_mode == "dark") {
-        document.cookie = "light_mode=light; path=/MostlyUnwind/; expires=Thu, 18 Dec 3013 12:00:00 UT; Secure";
+        localStorage.setItem("light_mode", "light");
         document.getElementById("body").style.backgroundImage = "url(" + rootPath + "img/computer_bg_light.png)";
         document.getElementById("light").src = rootPath + "img/moon.png";
     }else{ /* in case something happened */
-        document.cookie = "light_mode=light; path=/MostlyUnwind/; expires=Thu, 18 Dec 3013 12:00:00 UT; Secure";
+        localStorage.setItem("light_mode", "light");
+    }
+}
+
+
+function world_map_locked(){
+    let psw = prompt("This page is locked.\nTo access it, please enter the password.");
+    if(psw=="cumInYourMouth"){
+        document.getElementById("worldMap").style.display = "none";
+        document.getElementById("worldMapOn").style.display = "block";
+        
+    }else{
+        alert("Wrong password.");
+        document.getElementById("worldMap").remove();
     }
 }

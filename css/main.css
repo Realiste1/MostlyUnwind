@@ -70,6 +70,15 @@ nav a{
     padding: 0.5rem;
 }
 
+#worldMapOn {
+    display: none;
+}
+
+.menu_off{
+    background-color: rgb(75, 47, 47);
+    color: rgb(206, 206, 206);
+}
+
 
 #menu {
     display: none;
