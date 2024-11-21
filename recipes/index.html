@@ -15,9 +15,10 @@
             <a class="menu_a" href="../">Main Page</a>
             <a class="menu_a" href="../#downloads">Downloads</a>
             <a class="menu_a" href="../recipes">Recipes</a>
-            <a class="menu_a" href="http://194.153.216.227:25675/" target="_blank">World Map</a>
+            <a class="menu_a" id="worldMapOn" href="http://194.153.216.227:25675/" target="_blank">World Map</a>
+            <a class="menu_a menu_off" id="worldMap" onclick="world_map_locked()" target="_blank">World Map</a>
             <div id="light_div">
-			    <a><img src="../img/moon.png" alt="Enable Light Mode" id="light" onclick="change_light_mode()"></a>
+			    <a onclick="change_light_mode()"><img src="../img/moon.png" alt="Enable Light Mode" id="light"></a>
             </div>
         </div>
 	</nav>
@@ -25,10 +26,21 @@
         <div id="menu_recipes">
             <img src="../img/crafting_table_icon.png" id="burger_recipes" onclick="toggle_menu_recipes()" alt="Open Recipes List">
             <div id="recipes_menu">
-            
+			    <a class="menu_r_a" href="./weapons"><img src="../img/recipes/weapons.png" alt="Weapons" id="r_weapons"></a>
+			    <a><img src="../img/recipes/armor.png" alt="Armor" id="r_armor"></a>
+			    <a><img src="../img/recipes/tools.png" alt="Tools" id="r_tools"></a>
+			    <a><img src="../img/recipes/misc_items.png" alt="Misc Items" id="r_misc_items"></a>
+                
             </div>
         </div>
-		
+		<div id="main_recipes">
+            <h2>Wiki</h2>
+            <p>
+                Welcome to the wiki. This place will cover many different items present within the server.<br><br>
+                All items will have their uses explained*, as well as how to obtain it and the stats for the tools.<br><br>To begin browsing the wiki, select a tab from the crafting table.<br><br>
+                <span style="color: orange;">Do note, however, that only common items are present at first. To unlock more items in the wiki, someone else must have obtained it.</span><br><span style="color: gray;">(It will (probably) update manually, so dm Realiste if you obtain a new item)</span>
+            </p>
+        </div>
 	</main>
 	<script src="../scripts/main.js" async defer></script>
 	<script src="../scripts/recipes.js" async defer></script>

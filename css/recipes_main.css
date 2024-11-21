@@ -26,7 +26,7 @@ p {
     text-decoration: none;
     color: white;
     font-family: "Minecraft", sans-serif;
-    border: 0.1rem darkgray solid;
+    border: 0.1rem rgb(151, 68, 0) solid;
     font-size: 1.5rem;
     padding: 0.5rem;
 }
@@ -44,6 +44,21 @@ p {
     transition: 0.3s;
     vertical-align: middle;
     margin: 0.25rem;
+}
+h2 {
+    font-family: "Minecraft Ten", sans-serif;
+    color: lightblue;
+    text-shadow: 0rem 0rem 1rem green;
+    padding-left: 2rem;
+}
+
+main p{
+    color: white;
+}
+
+#main_recipes {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.5rem;
 }
 
 @media screen and (min-width=900px) {
