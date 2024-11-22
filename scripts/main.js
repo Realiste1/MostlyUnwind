@@ -6,10 +6,20 @@ if(host == "127.0.0.1"){
     rootPath = "/";
 }
 
-/* document.getElementsByClassName("logo").src = `${rootPath}img/logo.png`;
-document.getElementById("stylesheet").href = `${rootPath}css/style.css`; */
+function stringToHash(string) {
 
-/* biscuits */
+    let hash = 0;
+
+    if (string.length == 0) return hash;
+
+    for (i = 0; i < string.length; i++) {
+        char = string.charCodeAt(i);
+        hash = ((hash << 5) - hash) + char;
+        hash = hash & hash;
+    }
+
+    return hash;
+}
 
 let clight_mode = localStorage.getItem("light_mode")
 if (clight_mode == "light") {
@@ -62,11 +72,9 @@ function change_light_mode() {
         localStorage.setItem("light_mode", "light");
     }
 }
-
-
 function world_map_locked(){
-    let psw = prompt("This page is locked.\nTo access it, please enter the password.");
-    if(psw=="cumInYourMouth"){
+    let psw = stringToHash(prompt("This page is locked.\nTo access it, please enter the password."));
+    if(psw==-1733307532){
         document.getElementById("worldMap").style.display = "none";
         document.getElementById("worldMapOn").style.display = "block";
         
