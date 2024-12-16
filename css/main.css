@@ -68,6 +68,7 @@ nav a{
     border: 0.1rem darkgray solid;
     font-size: 1.5rem;
     padding: 0.5rem;
+    min-width: 8rem;
 }
 
 #worldMapOn {
