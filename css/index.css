@@ -10,7 +10,7 @@
 
 /* All screens */
 
-#uses {
+#uses, #release_date {
     font-family: "Minecraft";
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
@@ -76,12 +76,12 @@
 
 @media screen and (min-width:900px) {
 
-    #part1{
+    #part1, #part2{
         padding-left: 30%;
         padding-right: 30%;
     }
 
-    #uses {
+    #uses, #release_date {
         padding-left: 2rem;
     }
 
