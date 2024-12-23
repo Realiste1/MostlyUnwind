@@ -34,3 +34,11 @@
 .w-1-5rem {
     width: 1.5rem !important;
 }
+
+
+@media screen and (min-width:900px) {
+
+    .w-lg-25 {
+        width: 25% !important;
+    }
+}
