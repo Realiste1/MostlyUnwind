@@ -80,14 +80,119 @@
 					</a>
 				</div>
 				<div>
-					<a id="dl_modpack_multi" href="./fuckedup.html" target="_blank">
-						<img src="./img/dl_multimc.png" alt="Download Modpack (MultiMC)">
-						<p>Modpack (MultiMC)</p>
+					<a id="dl_modpack_multi" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+						<img src="./img/icon.png" alt="Download Modpack">
+						<p>Modpack</p>
 					</a>
 				</div>
 			</div>
 		</div>
 	</main>
+    <div class="offcanvas offcanvas-start bg-black font-minecraft w-25" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="fs-2 font-minecraft-ten text-white" id="offcanvasExampleLabel">Downloads</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div>
+                <p class="text-white">Here are the possible download options:</p>
+            </div>
+            <div class="d-flex flex-row justify-content-evenly">
+                <a id="dl_modpack_multi" href="https://www.dropbox.com/scl/fi/z6djkyu08v8l50n8r569c/MostlyUnwind-1.21.1.zip?rlkey=444hb8iu0a2l2wzl1onqbkv72&st=26fbqt3d&dl=1" target="_blank" role="button" class="text-decoration-none w-50">
+                    <img src="./img/multimc.png" alt="Download Modpack - MultiMC" class="img-fluid">
+                    <p class="text-center text-success">MultiMC</p>
+                </a>
+                <a id="dl_modpack_curseforge" href="https://www.dropbox.com/scl/fi/j7946qlzgj1g19hpmwdgi/CURSEFORGE-MostlyUnwind-1.12.1-1.0.0.zip?rlkey=ykmvaw382p52czmd3fkff30if&st=9dkkxmz2&dl=1" target="_blank" role="button" class="text-decoration-none w-50 mx-4">
+                    <img src="./img/curseforge.png" alt="Download Modpack - Curseforge" class="img-fluid">
+                    <p class="text-center text-success">Curseforge</p>
+                </a>
+                <a id="dl_modpack_vanilla" href="https://www.dropbox.com/scl/fi/z6djkyu08v8l50n8r569c/MostlyUnwind-1.21.1.zip?rlkey=444hb8iu0a2l2wzl1onqbkv72&st=26fbqt3d&dl=1" target="_blank" role="button" class="text-decoration-none w-50">
+                    <img src="./img/vanilla.png" alt="Download Modpack - Vanilla" class="img-fluid">
+                    <p class="text-center text-success">Vanilla</p>
+                </a>
+            </div>
+            <div class="d-flex flex-column gap-2 w-50 mx-auto">
+                <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_MultiMC" aria-expanded="false" aria-controls="collapse_MultiMC">
+                    MultiMC Instructions
+                </button>
+                <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_CurseForge" aria-expanded="false" aria-controls="collapse_CurseForge">
+                    Curseforge Instructions
+                </button>
+                <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_Vanilla" aria-expanded="false" aria-controls="collapse_Vanilla">
+                    Vanilla Instructions
+                </button>
+            </div>
+            <div class="collapse" id="collapse_MultiMC">
+                <div class="card card-body bg-dark">
+                    <h2 class="text-white text-center">
+                        MultiMC
+                    </h2>
+                    <ol class="text-white">
+                        <li>Download the right file. (DO NOT EXTRACT IT)</li>
+                        <li>In MultiMC, press <span class="fw-bold text-info">Add Instance</span></li>
+                        <li>Click on <span class="fw-bold text-info">Import from zip</span></li>
+                        <li>Click on <span class="fw-bold text-info">Browse</span>, then select the zip file you downloaded.</li>
+                        <li>Make sure the correct file is selected</li>
+                        <li>Click <span class="fw-bold text-info">OK</span> and it will magically install itself.</li>
+                    </ol>
+                    <p class="text-white">Once done, just press play and have fun!</p>
+                    <img src="./img/instructions_multimc1.png" alt="MultiMC Info 1" class="img-fluid">
+                    <img src="./img/instructions_multimc2.png" alt="MultiMC Info 2" class="img-fluid">
+                </div>
+            </div>
+            <div class="collapse" id="collapse_CurseForge">
+                <div class="card card-body bg-dark">
+                    <h2 class="text-white text-center">
+                        Curseforge
+                    </h2>
+                    <ol class="text-white">
+                        <li>Download the right file. (DO NOT EXTRACT IT)</li>
+                        <li>In CurseForge, press <span class="fw-bold text-info">Import</span></li>
+                        <p class="text-warning">If there is no <span class="fw-bold text-info">Import</span> button, press <span class="fw-bold text-info">New</span>, and then <span class="fw-bold text-info">Import</span> at the top in small text.</p>
+                        <li>Select the zip file you downloaded.</li>
+                    </ol>
+                    <p class="text-white">Once done, just press play and have fun!</p>
+                    <div>
+                        <p class="text-warning d-inline-block">If you need additional ram allocated, </p>
+                        <a class="d-inline-block" href="https://www.meloncube.net/clients/knowledgebase/184/How-To-Allocate-More-Ram-in-the-CurseForge-Launcher.html">Click here.</a>
+                    </div>
+                    <img src="./img/instructions_curse1.png" alt="Curseforge Info 1" class="img-fluid">
+                </div>
+            </div>
+            <div class="collapse" id="collapse_Vanilla">
+                <div class="card card-body bg-dark">
+                    <h2 class="text-white text-center">
+                        Vanilla
+                    </h2>
+                    <p class="text-danger d-inline-block">It is recommended to use MultiMC or Curseforge instead!</p>
+                    <p class="text-warning d-inline-block">I just put this option cuz I know there are lazy people around here. <span class="fst-italic">cough cough</span> ghost</p>
+                    <ol class="text-white">
+                        <li>Download the right file. Extract/open it.</li>
+                        <li>In the windows search bar, type <span class="fw-bold text-info">%appdata%</span>.</li>
+                        <li>Navigate to <span class="fw-bold text-info">/.minecraft/</span>.</li>
+                        <li>Inside the file you downloaded or extracted, navigate to <span class="fw-bold text-info">/.minecraft/</span>.</li>
+                        <li>Transfer all files from this folder to the folder you opened in step 3.</li>
+                        <li>If your Minecraft launcher is already open, close it.</li>
+                        <li>Download FabricMC's installer <a href="https://fabricmc.net/use/installer/" target="_blank">Here</a>.</li>
+                        <li>Open the installer.</li>
+                        <li>Under Minecraft Version, select <span class="fw-bold text-info">1.21.1</span>.</li>
+                        <li>Under Fabric Version, select <span class="fw-bold text-info">0.16.9</span>.</li>
+                        <li>Keep create new profile on, and press install.</li>
+                        <li>Now, open your Minecraft launcher</li>
+                        <li>Under <span class="fw-bold text-info">Installations</span>, find the new installation created by Fabric, and then select <span class="fw-bold text-info">Edit</span>.</li>
+                        <li>Click <span class="fw-bold text-info">More Options</span>.</li>
+                        <li>Under JVM Arguments, change the number in <span class="fw-bold text-info">-Xmx2G</span> to either 4 or higher, depending on how much ram your computer has.</li>
+                        <li>Finally, click play and pray nothing exploded.</li>
+                    </ol>
+                    <p class="text-danger">If something went wrong, I will not debug for you, I will not help you, fuck you and just get multimc instead. It's way better, I dont care what you say, just get it.</p>
+                    <img src="./img/instructions_vanilla1.png" alt="Vanilla Info 1" class="img-fluid">
+                    <img src="./img/instructions_vanilla2.png" alt="Vanilla Info 2" class="img-fluid">
+                    <img src="./img/instructions_vanilla3.png" alt="Vanilla Info 3" class="img-fluid">
+                    <img src="./img/instructions_vanilla4.png" alt="Vanilla Info 4" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
     <footer class="bg-dark">
         <p class="p-2 text-white text-center font-minecraft">Made with love by Realiste
             <img src="img/heart.png" alt="heart" class="ms-2 w-1-5rem">
