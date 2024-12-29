@@ -72,14 +72,3 @@ function change_light_mode() {
         localStorage.setItem("light_mode", "light");
     }
 }
-function world_map_locked(){
-    let psw = stringToHash(prompt("This page is locked.\nTo access it, please enter the password."));
-    if(psw==-1733307532){
-        document.getElementById("worldMap").style.display = "none";
-        document.getElementById("worldMapOn").style.display = "block";
-        
-    }else{
-        alert("Wrong password.");
-        document.getElementById("worldMap").remove();
-    }
-}
