@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<title>MostlyUnwind</title>
+	<link rel="icon" href="/img/icon.png">
+	<link rel="stylesheet" href="/css/index.css">
+	<link rel="stylesheet" href="/css/main.css">
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- CSS -->
+	<link rel="stylesheet" href="/css/index.css">
+	<link rel="stylesheet" href="/css/main.css">
+	<link rel="stylesheet" href="/css/recipes_main.css">
+    <link rel="stylesheet" href="/css/c_classes.css">
+</head>
+<body id="body">
+	<nav class="z-3">
+        <img src="/img/burgeur.png" id="burger" onclick="toggle_menu()" alt="Open Category List">
+        <div id="menu">
+            <a class="menu_a" href="/">Main Page</a>
+            <a class="menu_a" href="/#downloads">Downloads</a>
+            <a class="menu_a" href="/recipes">Wiki</a>
+            <a class="menu_a" href="http://194.153.216.227:25675/" target="_blank">World Map</a>
+            <div id="light_div">
+			    <a onclick="change_light_mode()"><img src="/img/moon.png" alt="Enable Light Mode" id="light"></a>
+            </div>
+        </div>
+	</nav>
+	<main>
+        <div class="d-flex flex-column flex-lg-row">
+            <div id="menu_recipes" class="w-20">
+                <img src="/img/crafting_table_icon.png" id="burger_recipes" onclick="toggle_menu_recipes()" alt="Open Recipes List" class="d-lg-none">
+                <div id="recipes_menu" class="d-lg-flex">
+                    <a class="menu_r_a" href="../materials"><img src="/img/resource_pack/terrestial/terrestial_essence.gif" class="w-5rem mx-3" alt="Materials" id="r_materials">Materials</a>
+                    <a class="menu_r_a" href="../weapons"><img src="/img/resource_pack/misc/The_Starless_Night_Texture_(MCD).png" class="w-5rem mx-3" alt="Weapons" id="r_weapons">Weapons</a>
+                    <a class="menu_r_a" href="../armor"><img src="/img/recipes/armor.png" class="w-5rem mx-3" alt="Armor" id="r_armor"></a>
+                    <a class="menu_r_a" href="../tools"><img src="/img/resource_pack/misc/fire_axe_or_sum.png" class="w-5rem mx-3" alt="Tools" id="r_tools">Tools</a>
+                    <a class="menu_r_a menu_recipes_selected" href="../enchants"><img src="/img/minecraft/item/enchanted_book.png" class="w-5rem mx-3" alt="Enchants" id="r_enchants">Enchants</a>
+                    <a class="menu_r_a" href="../misc_items"><img src="/img/resource_pack/cake.png" class="w-5rem mx-3" alt="Misc Items" id="r_misc_items">Misc. Items</a>
+                    <a class="menu_r_a" href="../music_discs"><img src="/img/resource_pack/music_disc_awman.png" class="w-5rem mx-3" alt="Music Discs" id="r_music_discs">Music Discs</a>
+                    <a class="menu_r_a" href="../mobs"><img src="/img/recipes/mobs.png" class="w-5rem mx-3" alt="Mobs" id="r_mobs"></a>
+                    <a class="menu_r_a" href="../dimensions"><img src="/img/resource_pack/misc/dim_1.png" class="w-5rem mx-3" alt="Dimensions" id="r_mobs">Dimensions</a>
+                    
+                </div>
+            </div>
+            <div id="main_recipes" class="mx-lg-3">
+                <h2>ENCHANTS</h2>
+                <p>
+                    Many custom enchants has been added onto the server, and only more are going to come.
+                    <br>
+                    Despite having /cench info, multiple people still seem to not know what an enchant does, so here's a full list!
+                </p>
+                
+                
+                <h3>1. Types</h3>
+                <p>
+                    There are 4 types of enchantments, each defining how an enchant should be categorised.
+                </p>
+                
+                <h4>1.1. Regular</h4>
+                <p>
+                    <span class="regular-color">Regular</span>
+                     enchants are the first type of enchants, and is a vanilla type. They are gray, and offer some advantage to the player. These enchants are:
+                    <ul>
+                        <li>Grindstonable</li>
+                        <li>Kept on death</li>
+                        <li>Disenchantable (T1) <span class="text-danger">[WIP]</span></li>
+                    </ul>
+                </p>
+                
+                <h4>1.2. Curse</h4>
+                <p>
+                    <span class="curse-color">Curses</span>
+                    enchants are the second type of enchants, and is a vanilla type. They are red, and hinder the player's progression by applying various debuffs. These enchants are:
+                    <ul>
+                        <li>Not grindstonable</li>
+                        <li>Kept on death</li>
+                        <li>Disenchantable (T4) <span class="text-danger">[WIP]</span></li>
+                    </ul>
+                </p>
+                
+                <h4>1.3. Paradoxical</h4>
+                <p>
+                    <span class="paradoxical-color">Paradoxical</span>
+                    enchants are the third type of enchants, and is a new type. They are purple, and offer the player a bonus, but with a negative effect, similar to a monkey paw. These enchants are:
+                    <ul>
+                        <li>Not grindstonable</li>
+                        <li>Kept on death</li>
+                        <li>Disenchantable (T3) <span class="text-danger">[WIP]</span></li>
+                    </ul>
+                </p>
+                
+                <h4>1.4. Ethereal</h4>
+                <p>
+                    <span class="ethereal-color">Ethereal</span>
+                    enchants are the fourth type of enchants, and is a new type. They are yellow, and greatly help the players in various way. They are extremely useful and generally offer the player major boosts. These enchants are:
+                    <ul>
+                        <li>Grindstonable</li>
+                        <li>Not kept on death</li>
+                        <li>Not disenchantable <span class="text-danger">[WIP]</span></li>
+                    </ul>
+                </p>
+
+                
+                <h3>2. LIST</h3>
+                <p>The following list will show every enchant obtainable, where to obtain them, and what they do. Click on them to go to the proper page.</p>
+                
+                <h4>2.1. List of regular enchants</h4>
+                <div class="d-flex">
+                    <div class="me-auto">
+                        <ul class="list-many fs-3">
+                            <li class="m-auto"><a class="text-decoration-none regular-color" href="regular/afterlife.html">Afterlife</a></li>
+                            <li class="m-auto"><a class="text-decoration-none regular-color" href="regular/anima_conduit.html">Anima Conduit</a></li>
+                            <li class="m-auto"><a class="text-decoration-none regular-color" href="regular/aridity.html">Aridity</a></li>
+                            <li class="m-auto"><a class="text-decoration-none regular-color" href="regular/butchering.html">Butchering</a></li>
+                            <li class="m-auto"><a class="text-decoration-none regular-color" href="regular/caving.html">Caving</a></li>
+                            <li class="m-auto"><a class="text-decoration-none regular-color" href="regular/crushing.html">Crushing</a></li>
+                            <li class="m-auto"><a class="text-decoration-none regular-color" href="regular/decay.html">Decay</a></li>
+                            <li class="m-auto"><a class="text-decoration-none regular-color" href="regular/defusal.html">Defusal</a></li>
+                            <li class="m-auto"><a class="text-decoration-none regular-color" href="regular/dimensional_stability.html">Dimensional Stability</a></li>
+                            <li class="m-auto"><a class="text-decoration-none regular-color" href="regular/disarming.html">Disarming</a></li>
+                            <li class="m-auto"><a class="text-decoration-none regular-color" href="regular/disengage.html">Disengage</a></li>
+                            <li class="m-auto"><a class="text-decoration-none regular-color" href="regular/divine_resonance.html">Divine Resonance</a></li>
+                            <li class="m-auto"><a class="text-decoration-none regular-color" href="regular/dual_wield.html">Dual Wield</a></li>
+                            <li class="m-auto"><a class="text-decoration-none regular-color" href="regular/earthbound.html">Earthbound</a></li>
+                            <li class="m-auto"><a class="text-decoration-none regular-color" href="regular/echoing.html">Echoing</a></li>
+                            <li class="m-auto"><a class="text-decoration-none regular-color" href="regular/enderspite.html">Enderspite</a></li>
+                        </ul>
+                    </div>
+                    <div class="me-auto">
+                        <ul class="list-many fs-3">
+                            <li class="m-auto"><a class="text-decoration-none regular-color" href="regular/excavator.html">Excavator</a></li>
+                            <li class="m-auto"><a class="text-decoration-none regular-color" href="regular/frenzied.html">Frenzied</a></li>
+                            <li class="m-auto"><a class="text-decoration-none regular-color" href="regular/frictionless.html">Frictionless</a></li>
+                            <li class="m-auto"><a class="text-decoration-none regular-color" href="regular/frostburn.html">Frostburn</a></li>
+                            <li class="m-auto"><a class="text-decoration-none regular-color" href="regular/frostcreep.html">Frostcreep</a></li>
+                            <li class="m-auto"><a class="text-decoration-none regular-color" href="regular/handheld.html">Handheld</a></li>
+                            <li class="m-auto"><a class="text-decoration-none regular-color" href="regular/harvester.html">Harvester</a></li>
+                            <li class="m-auto"><a class="text-decoration-none regular-color" href="regular/hogsbane.html">Hogsbane</a></li>
+                            <li class="m-auto"><a class="text-decoration-none regular-color" href="regular/immortal.html">Immortal</a></li>
+                            <li class="m-auto"><a class="text-decoration-none regular-color" href="regular/lava_walker.html">Lava Walker</a></li>
+                            <li class="m-auto"><a class="text-decoration-none regular-color" href="regular/lightweight.html">Lightweight</a></li>
+                            <li class="m-auto"><a class="text-decoration-none regular-color" href="regular/manathirst.html">Manathirst</a></li>
+                            <li class="m-auto"><a class="text-decoration-none regular-color" href="regular/outreach.html">Outreach</a></li>
+                            <li class="m-auto"><a class="text-decoration-none regular-color" href="regular/pilfering.html">Pilfering</a></li>
+                            <li class="m-auto"><a class="text-decoration-none regular-color" href="regular/pinpoint.html">Pinpoint</a></li>
+                        </ul>
+                    </div>
+                    <div class="me-auto">
+                        <ul class="list-many fs-3">
+                            <li class="m-auto"><a class="text-decoration-none regular-color" href="regular/planar_binding.html">Planar Binding</a></li>
+                            <li class="m-auto"><a class="text-decoration-none regular-color" href="regular/resilience.html">Resilience</a></li>
+                            <li class="m-auto"><a class="text-decoration-none regular-color" href="regular/scorching.html">Scorching</a></li>
+                            <li class="m-auto"><a class="text-decoration-none regular-color" href="regular/shulkenforced.html">Shulkenforced</a></li>
+                            <li class="m-auto"><a class="text-decoration-none regular-color" href="regular/soul_touch.html">Soul Touch</a></li>
+                            <li class="m-auto"><a class="text-decoration-none regular-color" href="regular/soulstealing.html">Soulstealing</a></li>
+                            <li class="m-auto"><a class="text-decoration-none regular-color" href="regular/spiritheart.html">Spiritheart</a></li>
+                            <li class="m-auto"><a class="text-decoration-none regular-color" href="regular/stuttershot.html">Stuttershot</a></li>
+                            <li class="m-auto"><a class="text-decoration-none regular-color" href="regular/transference.html">Transference</a></li>
+                            <li class="m-auto"><a class="text-decoration-none regular-color" href="regular/tree_feller.html">Tree Feller</a></li>
+                            <li class="m-auto"><a class="text-decoration-none regular-color" href="regular/unshakeable.html">Unshakeable</a></li>
+                            <li class="m-auto"><a class="text-decoration-none regular-color" href="regular/unsinkable.html">Unsinkable</a></li>
+                            <li class="m-auto"><a class="text-decoration-none regular-color" href="regular/vampiric.html">Vampiric</a></li>
+                            <li class="m-auto"><a class="text-decoration-none regular-color" href="regular/vein_miner.html">Vein Miner</a></li>
+                            <li class="m-auto"><a class="text-decoration-none regular-color" href="regular/void_walker.html">Void Walker</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h4>2.2. List of cursed enchants</h4>
+                <div class="d-flex">
+                    <div class="me-auto">
+                        <ul class="list-many fs-3">
+                            <li class="m-auto"><a class="text-decoration-none curse-color" href="curse/erosion.html">Curse of Erosion</a></li>
+                            <li class="m-auto"><a class="text-decoration-none curse-color" href="curse/exotic.html">Curse of the Exotic</a></li>
+                            <li class="m-auto"><a class="text-decoration-none curse-color" href="curse/insomnia.html">Curse of Insomnia</a></li>
+                            <li class="m-auto"><a class="text-decoration-none curse-color" href="curse/mercy.html">Curse of Mercy</a></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="me-auto">
+                        <ul class="list-many fs-3">
+                            <li class="m-auto"><a class="text-decoration-none curse-color" href="curse/midas.html">Curse of Midas</a></li>
+                            <li class="m-auto"><a class="text-decoration-none curse-color" href="curse/rebuking.html">Curse of Rebuking</a></li>
+                            <li class="m-auto"><a class="text-decoration-none curse-color" href="curse/splintering.html">Curse of Splintering</a></li>
+                            <li class="m-auto"><a class="text-decoration-none curse-color" href="curse/stumbling.html">Curse of Stumbling</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="me-auto">
+                        <ul class="list-many fs-3">
+                            <li class="m-auto"><a class="text-decoration-none curse-color" href="curse/the_end.html">Curse of The End</a></li>
+                            <li class="m-auto"><a class="text-decoration-none curse-color" href="curse/turbulence.html">Curse of Turbulence</a></li>
+                            <li class="m-auto"><a class="text-decoration-none curse-color" href="curse/vanilla.html">Curse of Vanilla</a></li>
+                            <li class="m-auto"><a class="text-decoration-none curse-color" href="curse/voiding.html">Curse of Voiding</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <h4>2.3. List of paradoxical enchants</h4>
+                <div class="d-flex">
+                    <div class="me-auto">
+                        <ul class="list-many fs-3">
+                            <li class="m-auto"><a class="text-decoration-none paradoxical-color" href="paradoxical/blast_miner.html">Blast Miner</a></li>
+                        </ul>
+                    </div>
+                    <div class="me-auto">
+                        <ul class="list-many fs-3">
+                            <li class="m-auto"><a class="text-decoration-none paradoxical-color" href="paradoxical/wicked.html">Wicked</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="me-auto">
+                        <ul class="list-many fs-3">
+                        </ul>
+                    </div>
+                </div>
+                <h4>2.4. List of ethereal enchants</h4>
+                <div class="d-flex">
+                    <div class="me-auto">
+                        <ul class="list-many fs-3">
+                            <li class="m-auto"><a class="text-decoration-none ethereal-color" href="ethereal/ender_shot.html">Ender Shot</a></li>
+                        </ul>
+                    </div>
+                    <div class="me-auto">
+                        <ul class="list-many fs-3">
+                            <li class="m-auto"><a class="text-decoration-none ethereal-color" href="ethereal/hellborne.html">Hellborne</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="me-auto">
+                        <ul class="list-many fs-3">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</main>
+    <footer class="bg-dark">
+        <p class="p-2 text-white text-center font-minecraft">Made with love by Realiste
+            <img src="/img/heart.png" alt="heart" class="ms-2 w-1-5rem">
+        </p>
+        <p class="p-2 text-warning text-center font-minecraft">
+            Not associated with Mojang or Microsoft
+        </p>
+    </footer>
+    <!-- SCRIPTS -->
+	<script src="/scripts/main.js" async defer></script>
+	<script src="/scripts/recipes.js" async defer></script>
+    <!-- BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

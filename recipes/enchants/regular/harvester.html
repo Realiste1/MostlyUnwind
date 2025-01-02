@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<title>MostlyUnwind</title>
+	<link rel="icon" href="/img/icon.png">
+	<link rel="stylesheet" href="/css/index.css">
+	<link rel="stylesheet" href="/css/main.css">
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- CSS -->
+	<link rel="stylesheet" href="/css/index.css">
+	<link rel="stylesheet" href="/css/main.css">
+	<link rel="stylesheet" href="/css/recipes_main.css">
+    <link rel="stylesheet" href="/css/c_classes.css">
+</head>
+<body id="body">
+	<nav class="z-3">
+        <img src="/img/burgeur.png" id="burger" onclick="toggle_menu()" alt="Open Category List">
+        <div id="menu">
+            <a class="menu_a" href="/">Main Page</a>
+            <a class="menu_a" href="/#downloads">Downloads</a>
+            <a class="menu_a" href="/recipes">Wiki</a>
+            <a class="menu_a" href="http://194.153.216.227:25675/" target="_blank">World Map</a>
+            <div id="light_div">
+			    <a onclick="change_light_mode()"><img src="/img/moon.png" alt="Enable Light Mode" id="light"></a>
+            </div>
+        </div>
+	</nav>
+	<main>
+        <div class="d-flex flex-column flex-lg-row">
+            <div id="menu_recipes" class="w-20">
+                <img src="/img/crafting_table_icon.png" id="burger_recipes" onclick="toggle_menu_recipes()" alt="Open Recipes List" class="d-lg-none">
+                <div id="recipes_menu" class="d-lg-flex">
+                    <a class="menu_r_a" href="../../materials"><img src="/img/resource_pack/terrestial/terrestial_essence.gif" class="w-5rem mx-3" alt="Materials" id="r_materials">Materials</a>
+                    <a class="menu_r_a" href="../../weapons"><img src="/img/resource_pack/misc/The_Starless_Night_Texture_(MCD).png" class="w-5rem mx-3" alt="Weapons" id="r_weapons">Weapons</a>
+                    <a class="menu_r_a" href="../../armor"><img src="/img/recipes/armor.png" class="w-5rem mx-3" alt="Armor" id="r_armor"></a>
+                    <a class="menu_r_a" href="../../tools"><img src="/img/resource_pack/misc/fire_axe_or_sum.png" class="w-5rem mx-3" alt="Tools" id="r_tools">Tools</a>
+                    <a class="menu_r_a menu_recipes_selected" href="../../enchants"><img src="/img/minecraft/item/enchanted_book.png" class="w-5rem mx-3" alt="Enchants" id="r_enchants">Enchants</a>
+                    <a class="menu_r_a" href="../../misc_items"><img src="/img/resource_pack/cake.png" class="w-5rem mx-3" alt="Misc Items" id="r_misc_items">Misc. Items</a>
+                    <a class="menu_r_a" href="../../music_discs"><img src="/img/resource_pack/music_disc_awman.png" class="w-5rem mx-3" alt="Music Discs" id="r_music_discs">Music Discs</a>
+                    <a class="menu_r_a" href="../../mobs"><img src="/img/recipes/mobs.png" class="w-5rem mx-3" alt="Mobs" id="r_mobs"></a>
+                    <a class="menu_r_a" href="../../dimensions"><img src="/img/resource_pack/misc/dim_1.png" class="w-5rem mx-3" alt="Dimensions" id="r_mobs">Dimensions</a>
+                    
+                </div>
+            </div>
+            <div id="main_recipes" class="mx-lg-3 w-100">
+                
+<!--                 <div class="quote p-2 pb-0">
+                    <p class="quote_msg">Well that was close?</p>
+                    <p class="mb-1 quote_author">- banishedghost<img src="/img/avatars/banishedghost.png"></p>
+                </div> -->
+
+                <h2 class="d-inline-block">Harvester</h2>
+                <p class="ms-3 text-warning fs-3 d-inline-block">I-II</p>
+                <div id="applied_on">
+                    <img src="/img/recipes/apply/boots_no.png" alt="">
+                    <img src="/img/recipes/apply/leggings_no.png" alt="">
+                    <img src="/img/recipes/apply/chestplate_no.png" alt="">
+                    <img src="/img/recipes/apply/helmet_no.png" alt="">
+
+                    <img src="/img/recipes/apply/sword_no.png" alt="">
+                    <img src="/img/recipes/apply/bow_no.png" alt="">
+                    <img src="/img/recipes/apply/pickaxe_no.png" alt="">
+                    <img src="/img/recipes/apply/axe_no.png" alt="">
+                    <img src="/img/recipes/apply/shovel_no.png" alt="">
+                    <img src="/img/recipes/apply/hoe.png" alt="">
+                    <img src="/img/recipes/apply/flint_and_steel_no.png" alt="">
+                    
+                </div>
+                <h3>1. Description</h3>
+                <p>Breaking or right clicking a crop will harvest everything in a 3x3 radius, or 5x5 at level 2, and replant automaticly the crops.</p>
+                <h3>2. Obtaining</h3>
+                <p>Villages.</p>
+                <h3>3. Incompabilities</h3>
+                <p>None!</p>
+            </div>
+        </div>
+	</main>
+    <footer class="bg-dark">
+        <p class="p-2 text-white text-center font-minecraft">Made with love by Realiste
+            <img src="/img/heart.png" alt="heart" class="ms-2 w-1-5rem">
+        </p>
+        <p class="p-2 text-warning text-center font-minecraft">
+            Not associated with Mojang or Microsoft
+        </p>
+    </footer>
+    <!-- SCRIPTS -->
+	<script src="/scripts/main.js" async defer></script>
+	<script src="/scripts/recipes.js" async defer></script>
+    <!-- BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
